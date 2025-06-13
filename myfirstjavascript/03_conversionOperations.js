@@ -20,7 +20,7 @@ let str2 = ' i am prem'
 str3 = str1 + str2
 console.log(str3);
 console.log('1' + 2 + 3); //if string is first than everybody is taken as string ans is 123 
-console.log(1 + 2 + '3');// if string is last than addition of first no and than string ans : 33
+console.log(1 + 2 + '3');// if string is last than addition of first no'S and than string ans : 33
 
 
 let x=3
