@@ -43,10 +43,12 @@ let myobj = {
     qualification :'BE-IT' ,
 
 }
-console.log(myobj)
+
+console.log(myobj) //calling myobj
 
 let myfunc =function(){
     console.log("hello world ")
 }
-myfunc()
+
+myfunc()//calling myfunction
 
