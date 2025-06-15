@@ -52,3 +52,35 @@ let myfunc =function(){
 
 myfunc()//calling myfunction
 
+
+/*
+************************************************ TYPES OF PRIMITIVE OR NON PRIMITIVE DATATYPES ***********************
+
+PRIMITIVE TYPES [STACK] , NON PRIMITIVE TYPES [HEAP]
+isme CHANGE COPY ME HOTA HAI ,  CHANGE ORIGINAL VALUE ME HOTA HAI ..
+
+
+*/
+let original = 'prem'
+let copy =original;
+copy='sak'                        //primitive data types 
+console.log(copy);
+console.log(original);
+
+
+let user ={
+    emailid :'username123@gmail.com', // abi jo mera user variable he na vo stack me store hoga or jo obj hai vo heap me store hoga as a reference to that variable .                          
+    name :'prem',
+    userId : 34
+
+
+}
+
+let user2 = user;
+user2.name = 'sakshi'
+
+console.log(user)//sakshi      // non primitive type data type me ham object ki original value ko hi change kar dete he 
+console.log(user2)//sakshi
+
+
+
