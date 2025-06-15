@@ -1,1 +1,2 @@
-let convertittono = number(number1)
+  console.log(y); // ❌ Error
+//   console.log(z); // ❌ Error
