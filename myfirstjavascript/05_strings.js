@@ -14,7 +14,10 @@ console.log(name.slice(0,4));
 console.log(newname.trim());
 
 console.log(emailid.replace('%23','-'))
-console.log(emailid.includes('premx'))//false
+console.log(emailid.includes('premx'))//false   
+
+
+    
 
 
 
