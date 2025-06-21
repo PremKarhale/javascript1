@@ -74,5 +74,5 @@ console.log(obj3)
 
 //*** Used to convert object to the array -->'OBJECT.KEYS' */
 console.log(tinderuser1);
-console.log(Object.keys(tinderuser1))
-console.log(Object.values(tinderuser1))
+console.log(Object.keys(tinderuser1))  //[ 'id', 'name', 'isloggedIN' ]
+console.log(Object.values(tinderuser1)) //[ 12, 'prem', false ]
