@@ -15,19 +15,29 @@ myobj.username ='sam';
 myobj.website()
 
 
-const chai = function(){
-    let ussername = {
-        name:'prem',
-        age:20
-        
-    }
-    
-    
+const chai = () =>{
+    console.log(this) //{}    //arrow function 
+
 }
 chai()
 
 
-const chai2 = () =>{
-    console.log(this) //{}
-
+const addtwo = (num1,num2)=>{
+return num1+ num2                 // one way of writing the arrow function 
+                                    //agar parenthis dala to 'Return' use karna padta hai or nahi dala to nahi use karna padta 
 }
+console.log(addtwo(3,4))
+
+
+
+//!!imp..(implicit return)
+const subtwo = (num1,num2)=>(num1 - num2 )    //another  way of writing the arrow function 
+                                              // !!! IMPORTANT no need to write return 
+console.log(subtwo(3,4))
+
+
+const addthree = (num1,num2,num3)=>({
+    username:'prem',                     //Eg : of OBJECT INSIDE ARROW FUNCTION 
+    age:20
+})
+console.log(addthree(2,3,4))
