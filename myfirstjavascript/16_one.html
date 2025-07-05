@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 34px;
+
+        }
+
+        .parent .child1 {}
+
+        .bg-black {
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+
+
+
+</head>
+
+<body class="bg-black">
+
+
+
+    <div id="first" class="parent">
+        <div class="child1">
+            <h1>hey there we are learning javascript</h1>
+        </div>
+        <div class="child2"><input type="password" name="type password" id="pass"></div>
+
+        <ul>
+            <li class="list-items">one</li>
+            <li class="list-items">two</li>
+            <li class="list-items">three</li>
+        </ul>
+
+    </div>
+
+
+    <script>
+
+      // query selector  
+
+        const parent = document.querySelector('#first');
+        parent.children[0].innerHTML = 'prem karhale'  //directly accesing the children from the parent using query selector 
+        // parent.querySelector('.child1').innerHTML = 'hey' 
+
+        const store = document.querySelector('ul')
+        const er = store.children[0]
+        er.innerHTML = 'five'                     //the way of using and assigining DOM to the variables 
+        er.style.backgroundColor = 'green'
+
+        const templist = document.querySelectorAll('ul')   // queryselector ALL creats an array 
+        // templist[0].style.backgroundColor='pink' // one of way doing this 
+
+        templist.forEach((l) => {
+            l.style.backgroundColor = 'red'  //other way of doing this 
+        })
+
+
+       // class selector 
+       const tempclasslist= document.getElementsByClassName('list-items')
+       const listArray=Array.from(tempclasslist)
+       listArray.forEach(function(li){
+        li.style.color='blue'
+       })
+       
+
+
+    </script>
+</body>
+
+</html>
