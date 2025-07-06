@@ -15,7 +15,7 @@
 
         }
 
-        .parent .child1 {}
+
 
         .bg-black {
             background-color: #212121;
@@ -43,12 +43,20 @@
             <li class="list-items">three</li>
         </ul>
 
+
+
+    </div>
+
+    <div class="parent2">
+        <div class="bacche">one </div>
+        <div class="bacche">two</div>
+        <div class="bacche">three</div>
     </div>
 
 
     <script>
 
-      // query selector  
+        // query selector  
 
         const parent = document.querySelector('#first');
         parent.children[0].innerHTML = 'prem karhale'  //directly accesing the children from the parent using query selector 
@@ -59,7 +67,7 @@
         er.innerHTML = 'five'                     //the way of using and assigining DOM to the variables 
         er.style.backgroundColor = 'green'
 
-        const templist = document.querySelectorAll('ul')   // queryselector ALL creats an array 
+        const templist = document.querySelectorAll('ul')   // queryselector ALL creats an node lists 
         // templist[0].style.backgroundColor='pink' // one of way doing this 
 
         templist.forEach((l) => {
@@ -67,14 +75,42 @@
         })
 
 
-       // class selector 
-       const tempclasslist= document.getElementsByClassName('list-items')
-       const listArray=Array.from(tempclasslist)
-       listArray.forEach(function(li){
-        li.style.color='blue'
-       })
-       
+        // class selector 
+        const tempclasslist = document.getElementsByClassName('list-items')
+        const listArray = Array.from(tempclasslist)
+        listArray.forEach(function (li) {
+            li.style.color = 'blue'
+        })
 
+       const parent2=document.getElementsByClassName('parent2')
+        const parentchild= parent2[0].children
+        for (let i = 0; i <parentchild.length; i++) {
+            const element = parentchild[i];
+            element.style.color='red'
+            console.log(element)
+        }
+
+
+
+       const div= document.createElement('div')
+       console.log(div)
+       div.className='prem'
+       div.style.backgroundColor='green'
+       div.style.padding='12px'               //creating the div in the body using javascript 
+       div.innerHTML='hello from prem'
+
+       document.body.appendChild(div)
+
+
+
+
+
+       const create=document.createElement('h2')
+       console.log(create)
+       create.innerHTML='hye i am here'        //one more eg of creting an element in the body using javascript or using DOM 
+       create.style.color='red'
+       create.style.padding='12px'
+       document.body.appendChild(create)
 
     </script>
 </body>
