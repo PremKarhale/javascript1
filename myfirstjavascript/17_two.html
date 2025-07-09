@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+
+</body>
+<script>
+
+    function addlanguage(language) {
+        const element = document.createElement('li')
+        element.innerHTML=`${language}`             //way of adding the element in the any div or ul etc.
+    document.querySelector('.language').appendChild(element)
+
+    }
+addlanguage('python')
+addlanguage('java')
+document.querySelector('.language').children[1].style.backgroundColor='green'
+
+
+function addoptilang(lang){
+const li=document.createElement('li')
+li.appendChild(document.createTextNode(lang))   //optimised of way of doing the same thing 
+document.querySelector('.language').appendChild(li)
+}
+addoptilang('js')
+
+//Edit
+const secondli=document.querySelector('li:nth-child(2)')
+// secondli.innerHTML='prem'
+secondli.textContent='prem'
+
+//Edit 2
+const newli=document.createElement('li')
+newli.textContent='i am new li '      
+secondli.replaceWith(newli)         // Replace with ka eg , ek new element create kiya or usko purane element ke child se replace kar diya 
+
+// Remove 
+ const firstelement = document.querySelector('li:first-child')
+firstelement.remove() // it removes the element form the body 
+
+
+
+
+
+
+</script>
+
+</html>
