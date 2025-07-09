@@ -1,3 +1,10 @@
+
+
+getElementsByClassName ----> it gives me HTML collection , children property not directly applicable 
+document.queryselector()-------> it gives single element , children property directly applicable 
+document.queryselectorAll()------> it gives nodelists , children property directly not applicable
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,6 +59,11 @@
         <div class="bacche">two</div>
         <div class="bacche">three</div>
     </div>
+    <div class="parent2">
+        <div class="bacche">one </div>
+        <div class="bacche">two</div>
+        <div class="bacche">three</div>
+    </div>
 
 
     <script>
@@ -97,7 +109,7 @@
        div.className='prem'
        div.style.backgroundColor='green'
        div.style.padding='12px'               //creating the div in the body using javascript 
-       div.innerHTML='hello from prem'
+       div.innerHTML='hello from prem'        // isko mujhe jaha par dalna he vaha par append child karna padega 
 
        document.body.appendChild(div)
 
@@ -107,7 +119,7 @@
 
        const create=document.createElement('h2')
        console.log(create)
-       create.innerHTML='hye i am here'        //one more eg of creting an element in the body using javascript or using DOM 
+       create.innerHTML='hye i am here'//one more eg of creting an element in the  HTML using javascript or using DOM 
        create.style.color='red'
        create.style.padding='12px'
        document.body.appendChild(create)
