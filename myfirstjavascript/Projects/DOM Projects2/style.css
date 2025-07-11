@@ -1,0 +1,33 @@
+.bg-black{
+    background-color: #212121;
+    color: white;
+
+}
+h1{
+    text-align:center;
+}
+
+.boxes {
+    height: 20dvh;
+    width: 20dvw;
+    border: 2px solid black;
+    background-color: red;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.box1{
+    background-color: blue;
+}
+.box2{
+    background-color: red;
+}
+.box3{
+    background-color:pink;
+}
+.box4{
+    background-color:orange;
+}
