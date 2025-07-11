@@ -1,0 +1,25 @@
+.bg-black{
+    background-color: #212121;
+    color: white;
+    font-family: sans-serif;
+}
+.box{
+    background-color: rgb(224, 180, 122);
+    height: 65dvh;
+    width: 30dvw;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.form{
+    display: flex;
+    justify-content: center;
+   
+}
+p{
+    color: #212121;
+    font-size: large;
+
+}
