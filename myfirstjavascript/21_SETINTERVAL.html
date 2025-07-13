@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set interval</title>
+</head>
+
+<body>
+    <h1>hey there i am learnign javascript</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+</body>
+
+<script>
+    // setInterval(function(){},1000)  //basic syntax of setinterval
+
+    const btnstr = document.querySelector('#start')
+    const btnsto = document.querySelector('#stop')
+    const h1 = document.querySelector('h1')
+
+    const prem = function (str) {
+        h1.innerHTML = 'the diff betn setinterval and settimeout is one repeats again and again and one executes after set time '
+        console.log(str) //console kiya in javascript matalav vo srif console me hi dikhega
+    }
+    let store;
+    btnstr.addEventListener('click', () => {
+        clearInterval(store2)
+        store = setInterval(prem, 1000, 'prem')  //it can take three parameters also
+
+
+    })
+    let store2;
+    //stop btn pe eventlistener lagaya 
+    btnsto.addEventListener('click', () => {
+        clearInterval(store)
+        store2 = setInterval(() => {
+            h1.innerHTML = 'hey there i am learning javascript'
+        }, 1000);
+
+
+        console.log('interval stopped ')
+        console.log(`interval id : ${store} (have nothing to do with me )`)
+        return
+    })
+
+
+
+
+
+</script>
+
+</html>
