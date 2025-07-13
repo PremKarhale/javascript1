@@ -11,7 +11,7 @@ h1{
     height: 20dvh;
     width: 20dvw;
     border: 2px solid black;
-    background-color: red;
+    background-color: rgba(236, 5, 5, 0.562);
 }
 
 .parent {
