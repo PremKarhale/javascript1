@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set timeout</title>
+</head>
+
+<body>
+    <h1>hey there i am learnign javascript</h1>
+    <button>stop</button>
+
+
+
+</body>
+<script>
+ //********************************** SET TIMEOUT ***************************************************
+
+// setTimeout(function(){},2000) //basic syntax of settimeout 
+
+    const h1 = document.querySelector('h1')
+    const butn = document.querySelector('button')
+
+    // setTimeout(() => {
+    //     h1.innerHTML = 'javascript'     //set time out kya he ak  'call back'  function he jisme jo bhi kuch hoga kuch timedelay ke bad execute ho jayega 
+    //     console.log('settimeout worked')
+    // }, 2000);
+
+
+    //2nd way 
+    const changeh1 = function () {       //pehele functon banalo fir function ka rejerence dedo 
+        h1.innerHTML = 'javascript'
+        console.log('timeout worked')
+    }
+    const timeout = setTimeout(changeh1, 2000); // timeout set 
+
+    butn.addEventListener('click', (e) => {
+        clearTimeout(timeout)
+        console.log('i cleared the timeout')
+    })
+
+</script>
+
+</html>
