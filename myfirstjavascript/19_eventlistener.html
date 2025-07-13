@@ -1,0 +1,66 @@
+// event listener is an event object which listenes to the event of the object and perform the function on it
+// event listener jab bhi lagana to element to hamesha ya to "query selector" se nahi to "getelementbyId "se hi select karna
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>images</h2>
+    <div>
+        <ul id="images">
+            <li> <img width="200px" id="nature"
+                    src="https://cdn.pixabay.com/photo/2022/12/17/13/46/woods-7661735_1280.jpg" alt="pixabay"> </li>
+            <li><img width="200px" id="pet" src="https://cdn.pixabay.com/photo/2023/04/28/14/35/dog-7956828_640.jpg"
+                    alt="pixabay"></li>
+            <li><a id="google" href="https://www.google.com/">google</a></li>        
+        </ul>
+
+    </div>
+
+</body>
+<script>
+    //agar mene bubble event "true" kar diya to pehele parent ka event listener execute hoga or phir child ka or VICE VERSA
+    const images = document.getElementById('images')
+    images.addEventListener('click', function (e) {   // 1st event listener on the parent ul 
+
+        console.log('you clicked inside the ul ')
+    }, false)
+
+    //2nd event listnener on the child li
+    const nature = document.getElementById('nature')
+    nature.addEventListener('click', (e) => {
+        // console.log(e.target)  // isse hame pata chalta he ki hamne kis pe click kiya hai 
+        console.log('you clicked on nature')
+        console.log(`TIME STAMP : ${(e.timeStamp / 1000).toFixed(2)} sec`)
+        e.stopPropagation(); //used to stop propogation 
+
+    }, false) //(false) here is a bubble event propogation set karta hai down to top ---> false hai or top to down --> true hai 
+const google=document.getElementById('google')
+google.addEventListener('click',(e)=>{
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('google is clicked ')
+
+})
+
+const dog= document.querySelector('#pet')
+dog.addEventListener('click',(e)=>{
+    // console.log(e.target)
+    console.log(e.target.tagName) // me jis pe click kar raha hu vo kya he. {tag}  
+
+e.target.parentNode.remove()//uske parent node ko hi gayab kar diya --->{li}
+
+console.log('you clicked on the dog thats why he GAYAB!!!')
+e.stopPropagation()
+},false)
+
+
+</script>
+
+</html>
