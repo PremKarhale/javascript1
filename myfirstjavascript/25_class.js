@@ -11,4 +11,4 @@ class user {
 }
 
 const prem = new user('prem',20,'prem@')
-prem.EncapPassoword()
+prem.EncapPassoword() //prem@abc
