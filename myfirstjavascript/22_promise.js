@@ -1,4 +1,6 @@
 //promise is used to handeled the "asynchronous operations" such as API calls , setTimeout(), DB requests ,file reading 
+//current context ko reffer karne ke liye we use "this" keyword , and "new" key word is used to create the new instance of a object basically to prevent overwriting  in variables 
+
 
 // Promise 1 
 const promise1= new Promise(function (resolve, reject) {
